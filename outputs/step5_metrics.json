@@ -1,0 +1,866 @@
+{
+  "n": 100,
+  "run_details": {
+    "prompt_version": "pv2",
+    "model": "DeepSeek-V4-Flash-0731",
+    "endpoint": "http://dobolyi.com:9000/v1",
+    "seed": 42,
+    "sample_size": 100,
+    "sample_source": "step2_predictions.csv",
+    "nrc_lexicon": "NRC Emotion Lexicon v0.92 (https://saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm)",
+    "dataset_total_reviews": 152410,
+    "data_file": "Gift_Cards.jsonl.gz",
+    "run_date": "2026-09-28"
+  },
+  "llm_sentiment": {
+    "n": 100,
+    "n_ground_truth_positive": 88,
+    "n_ground_truth_negative": 12,
+    "class_balance": {
+      "positive": 0.88,
+      "negative": 0.12
+    },
+    "baseline_always_predict_positive": 0.88,
+    "accuracy": 0.98,
+    "confusion_matrix": {
+      "true_positive": 86,
+      "false_positive": 0,
+      "false_negative": 2,
+      "true_negative": 12
+    },
+    "per_class": {
+      "positive": {
+        "precision": 1.0,
+        "recall": 0.9772727272727273,
+        "f1": 0.9885057471264368
+      },
+      "negative": {
+        "precision": 0.8571428571428571,
+        "recall": 1.0,
+        "f1": 0.923076923076923
+      }
+    },
+    "balanced_accuracy": 0.9886363636363636,
+    "macro_f1": 0.9557913351016799,
+    "accuracy_by_rating": {
+      "1": {
+        "n": 10,
+        "correct": 10,
+        "accuracy": 1.0
+      },
+      "3": {
+        "n": 2,
+        "correct": 2,
+        "accuracy": 1.0
+      },
+      "4": {
+        "n": 8,
+        "correct": 6,
+        "accuracy": 0.75
+      },
+      "5": {
+        "n": 80,
+        "correct": 80,
+        "accuracy": 1.0
+      }
+    },
+    "n_unparsed": 0,
+    "n_emotion_unparsed": 0,
+    "n_sentiment_unparsed": 0
+  },
+  "nrc": {
+    "n_none": 27,
+    "n_tie": 48,
+    "tie_examples": [
+      {
+        "idx": null,
+        "title": "Pretty much perfct",
+        "nrc": "anticipation/joy"
+      },
+      {
+        "idx": null,
+        "title": "Perfect for graduation!!!",
+        "nrc": "anticipation/joy"
+      },
+      {
+        "idx": null,
+        "title": "Five Stars",
+        "nrc": "anticipation/joy/surprise/trust"
+      },
+      {
+        "idx": null,
+        "title": "It's a gift card",
+        "nrc": "anticipation/joy/surprise"
+      },
+      {
+        "idx": null,
+        "title": "Helpful",
+        "nrc": "joy/trust"
+      }
+    ]
+  },
+  "agreement": {
+    "n": 100,
+    "n_agree": 52,
+    "n_disagree": 48,
+    "overall": 0.52,
+    "overall_tie_counts_as_agreement": 0.52,
+    "excluding_none": 0.7123287671232876,
+    "strict_exact_match": 0.11,
+    "n_excluding_none": 73,
+    "n_strict": 11
+  },
+  "cross_tab": {
+    "emotions": [
+      "anger",
+      "anticipation",
+      "disgust",
+      "fear",
+      "joy",
+      "sadness",
+      "surprise",
+      "trust"
+    ],
+    "matrix": {
+      "anger": {
+        "anger": 0,
+        "anticipation": 3,
+        "disgust": 0,
+        "fear": 0,
+        "joy": 1,
+        "sadness": 0,
+        "surprise": 0,
+        "trust": 1
+      },
+      "anticipation": {
+        "anger": 0,
+        "anticipation": 0,
+        "disgust": 0,
+        "fear": 0,
+        "joy": 0,
+        "sadness": 0,
+        "surprise": 0,
+        "trust": 0
+      },
+      "disgust": {
+        "anger": 0,
+        "anticipation": 0,
+        "disgust": 0,
+        "fear": 0,
+        "joy": 0,
+        "sadness": 0,
+        "surprise": 0,
+        "trust": 0
+      },
+      "fear": {
+        "anger": 0,
+        "anticipation": 0,
+        "disgust": 0,
+        "fear": 0,
+        "joy": 0,
+        "sadness": 0,
+        "surprise": 0,
+        "trust": 0
+      },
+      "joy": {
+        "anger": 0,
+        "anticipation": 6,
+        "disgust": 0,
+        "fear": 0,
+        "joy": 9,
+        "sadness": 0,
+        "surprise": 0,
+        "trust": 1
+      },
+      "sadness": {
+        "anger": 0,
+        "anticipation": 1,
+        "disgust": 0,
+        "fear": 0,
+        "joy": 1,
+        "sadness": 1,
+        "surprise": 0,
+        "trust": 0
+      },
+      "surprise": {
+        "anger": 0,
+        "anticipation": 0,
+        "disgust": 0,
+        "fear": 0,
+        "joy": 0,
+        "sadness": 0,
+        "surprise": 0,
+        "trust": 0
+      },
+      "trust": {
+        "anger": 0,
+        "anticipation": 0,
+        "disgust": 0,
+        "fear": 0,
+        "joy": 0,
+        "sadness": 0,
+        "surprise": 0,
+        "trust": 1
+      }
+    },
+    "n_skipped_nrc_ties": 48,
+    "n_skipped_nrc_none": 27
+  },
+  "distributions": {
+    "llm": {
+      "anger": 11,
+      "joy": 79,
+      "sadness": 4,
+      "trust": 6
+    },
+    "nrc": {
+      "anger": 0,
+      "anticipation": 10,
+      "disgust": 0,
+      "fear": 0,
+      "joy": 11,
+      "none": 27,
+      "sadness": 1,
+      "surprise": 0,
+      "tie": 48,
+      "trust": 3
+    }
+  },
+  "emotion_vs_sentiment": {
+    "llm": {
+      "anger": {
+        "n": 11,
+        "mean_rating": 1.4545454545454546,
+        "positive_share_gt": 0.09090909090909091
+      },
+      "joy": {
+        "n": 79,
+        "mean_rating": 4.949367088607595,
+        "positive_share_gt": 1.0
+      },
+      "sadness": {
+        "n": 4,
+        "mean_rating": 3.0,
+        "positive_share_gt": 0.5
+      },
+      "trust": {
+        "n": 6,
+        "mean_rating": 4.833333333333333,
+        "positive_share_gt": 1.0
+      }
+    },
+    "nrc": {
+      "anticipation": {
+        "n": 10,
+        "mean_rating": 3.9,
+        "positive_share_gt": 0.7
+      },
+      "joy": {
+        "n": 11,
+        "mean_rating": 4.545454545454546,
+        "positive_share_gt": 0.9090909090909091
+      },
+      "sadness": {
+        "n": 1,
+        "mean_rating": 1.0,
+        "positive_share_gt": 0.0
+      },
+      "trust": {
+        "n": 3,
+        "mean_rating": 3.6666666666666665,
+        "positive_share_gt": 0.6666666666666666
+      }
+    }
+  },
+  "disagreements": {
+    "n": 48,
+    "by_reason": {
+      "context_mismatch": [
+        {
+          "rating": 5,
+          "title": "Got it when it said",
+          "text": "Nice delivery and fast. Hope the mom-to-be has no problems with it\ud83e\udd30 \ud83d\ude45\ud83d\udc86\ud83d\ude4e\ud83d\ude47.",
+          "ground_truth": "positive",
+          "prediction": "positive",
+          "llm_emotion": "joy",
+          "nrc_emotion": "anticipation",
+          "nrc_matched_words": "anticipation:delivery,hope; joy:hope; surprise:hope; trust:hope",
+          "nrc_tie": false,
+          "curated_note": "'no problems' is positive but contains a negation word; hope pulls anticipation"
+        },
+        {
+          "rating": 1,
+          "title": "Gift card compromised!!!",
+          "text": "Bought this gift card from Amazon for my daughter for Christmas! $110 worth of charges magically appeared. I will never buy another gift card from Amazon again. Contacted them and got zero response.",
+          "ground_truth": "negative",
+          "prediction": "negative",
+          "llm_emotion": "anger",
+          "nrc_emotion": "joy",
+          "nrc_matched_words": "anticipation:gift; joy:gift,daughter; surprise:gift",
+          "nrc_tie": false,
+          "curated_note": "positive words (gift, daughter, Christmas) in a scam/complaint review"
+        },
+        {
+          "rating": 5,
+          "title": "Its a Gift Card",
+          "text": "What can I say about a gift card.  It works, it was exactly what I expected, and I would purchase again.",
+          "ground_truth": "positive",
+          "prediction": "positive",
+          "llm_emotion": "joy",
+          "nrc_emotion": "anticipation",
+          "nrc_matched_words": "anticipation:gift,expected; joy:gift; surprise:gift",
+          "nrc_tie": false,
+          "curated_note": ""
+        },
+        {
+          "rating": 5,
+          "title": "Good feature.",
+          "text": "Needed to add to my order balance and this helps reach that order balance immediately.  Good feature.",
+          "ground_truth": "positive",
+          "prediction": "positive",
+          "llm_emotion": "joy",
+          "nrc_emotion": "anticipation",
+          "nrc_matched_words": "anticipation:good,immediately; joy:good; surprise:good; trust:good",
+          "nrc_tie": false,
+          "curated_note": ""
+        },
+        {
+          "rating": 4,
+          "title": "Nice gift card",
+          "text": "Arrived quickly. Looks nice except the cutout on the back of the tin- you see a barcode not Merry Christmas so the picture is misleading. You could flip the gift card over but then it would look silly when they open the tin.",
+          "ground_truth": "positive",
+          "prediction": "positive",
+          "llm_emotion": "sadness",
+          "nrc_emotion": "joy",
+          "nrc_matched_words": "anger:misleading; anticipation:gift; disgust:misleading; joy:gift,merry,silly; surprise:gift",
+          "nrc_tie": false,
+          "curated_note": "'nice/merry' joy words vs misleading-cutout complaint"
+        },
+        {
+          "rating": 1,
+          "title": "Nominations",
+          "text": "So incredibly stupid, they sent me two cars they were both different nominations it does not tell you which one is which value. Told you to look up the serial number but she was no serial number anywhere I can find should not be this much work it\u2019s really stupid will never do it again thanks for",
+          "ground_truth": "negative",
+          "prediction": "negative",
+          "llm_emotion": "anger",
+          "nrc_emotion": "anticipation",
+          "nrc_matched_words": "anticipation:serial",
+          "nrc_tie": false,
+          "curated_note": "EmoLex oddity: 'serial' -> anticipation in an angry incoherent review"
+        },
+        {
+          "rating": 5,
+          "title": "Five Stars",
+          "text": "reloading is so easily and the money  is applied immediately",
+          "ground_truth": "positive",
+          "prediction": "positive",
+          "llm_emotion": "joy",
+          "nrc_emotion": "anticipation",
+          "nrc_matched_words": "anger:money; anticipation:money,immediately; joy:money; surprise:money; trust:money",
+          "nrc_tie": false,
+          "curated_note": ""
+        },
+        {
+          "rating": 3,
+          "title": "Supposed to be ready to use.",
+          "text": "Purchased two of these as a gift for my daughter. Assumed them to be 'ready to use' since there were no instructions to activate, secure a PIN or anything else. Daughter said she could not use them when she tried.<br /><br />So hopefully she has called customer service to see what the deal is.",
+          "ground_truth": "negative",
+          "prediction": "negative",
+          "llm_emotion": "anger",
+          "nrc_emotion": "anticipation",
+          "nrc_matched_words": "anticipation:ready,gift,instructions,deal; joy:gift,daughter,deal; surprise:gift,deal; trust:instructions,deal",
+          "nrc_tie": false,
+          "curated_note": "'assumed/ready/gift' anticipation words vs not-ready complaint"
+        }
+      ],
+      "negation": [
+        {
+          "rating": 1,
+          "title": "not happy my 2% credit didn't automatically apply",
+          "text": "had to call customer services, very very annoying",
+          "ground_truth": "negative",
+          "prediction": "negative",
+          "llm_emotion": "anger",
+          "nrc_emotion": "trust",
+          "nrc_matched_words": "anger:annoying; anticipation:happy; joy:happy; trust:happy,credit",
+          "nrc_tie": false,
+          "curated_note": "'not happy' counted as joy/anticipation; 'credit' counts trust"
+        },
+        {
+          "rating": 1,
+          "title": "Invalid",
+          "text": "Code didn\u2019t work. Didn\u2019t take certain letters in the code for redemption. Lesson learned no longer purchasing gift cards online.",
+          "ground_truth": "negative",
+          "prediction": "negative",
+          "llm_emotion": "anger",
+          "nrc_emotion": "anticipation",
+          "nrc_matched_words": "anticipation:lesson,gift; joy:gift; sadness:invalid; surprise:gift; trust:lesson",
+          "nrc_tie": false,
+          "curated_note": "'didn't work' / 'didn't take' ignored; gift/lesson/trust words win"
+        },
+        {
+          "rating": 4,
+          "title": "Watch what you are buying",
+          "text": "Product was not what I expected. I wanted to get Ebay cards and not visa debit cards. Lesson learned.",
+          "ground_truth": "positive",
+          "prediction": "negative",
+          "llm_emotion": "sadness",
+          "nrc_emotion": "anticipation",
+          "nrc_matched_words": "anticipation:watch,expected,lesson; fear:watch; trust:lesson",
+          "nrc_tie": false,
+          "curated_note": "'not what I expected' \u2014 expectation words feed anticipation"
+        }
+      ],
+      "no_matched_words": [
+        {
+          "rating": 5,
+          "title": "Five Stars",
+          "text": "So far I am a fan of Amazon",
+          "ground_truth": "positive",
+          "prediction": "positive",
+          "llm_emotion": "joy",
+          "nrc_emotion": "none",
+          "nrc_matched_words": "",
+          "nrc_tie": false,
+          "curated_note": ""
+        },
+        {
+          "rating": 4,
+          "title": "Easy",
+          "text": "Easy",
+          "ground_truth": "positive",
+          "prediction": "positive",
+          "llm_emotion": "joy",
+          "nrc_emotion": "none",
+          "nrc_matched_words": "",
+          "nrc_tie": false,
+          "curated_note": ""
+        },
+        {
+          "rating": 4,
+          "title": "Four Stars",
+          "text": "Works as advertised.",
+          "ground_truth": "positive",
+          "prediction": "positive",
+          "llm_emotion": "trust",
+          "nrc_emotion": "none",
+          "nrc_matched_words": "",
+          "nrc_tie": false,
+          "curated_note": ""
+        },
+        {
+          "rating": 5,
+          "title": "It was easy to do.",
+          "text": "I liked the ease of doing it.",
+          "ground_truth": "positive",
+          "prediction": "positive",
+          "llm_emotion": "joy",
+          "nrc_emotion": "none",
+          "nrc_matched_words": "",
+          "nrc_tie": false,
+          "curated_note": ""
+        },
+        {
+          "rating": 3,
+          "title": "Or if I earned more coins per purchase that would be great as well",
+          "text": "I wish the discount was higher. I would purchase more coins.  Or if I earned more coins per purchase that would be great as well.",
+          "ground_truth": "negative",
+          "prediction": "negative",
+          "llm_emotion": "sadness",
+          "nrc_emotion": "none",
+          "nrc_matched_words": "",
+          "nrc_tie": false,
+          "curated_note": ""
+        },
+        {
+          "rating": 5,
+          "title": "Easy and fast",
+          "text": "Easy and fast",
+          "ground_truth": "positive",
+          "prediction": "positive",
+          "llm_emotion": "joy",
+          "nrc_emotion": "none",
+          "nrc_matched_words": "",
+          "nrc_tie": false,
+          "curated_note": ""
+        },
+        {
+          "rating": 5,
+          "title": "Five Stars",
+          "text": "Awsome",
+          "ground_truth": "positive",
+          "prediction": "positive",
+          "llm_emotion": "joy",
+          "nrc_emotion": "none",
+          "nrc_matched_words": "",
+          "nrc_tie": false,
+          "curated_note": ""
+        },
+        {
+          "rating": 5,
+          "title": "Exactly as advertised",
+          "text": "Great",
+          "ground_truth": "positive",
+          "prediction": "positive",
+          "llm_emotion": "joy",
+          "nrc_emotion": "none",
+          "nrc_matched_words": "",
+          "nrc_tie": false,
+          "curated_note": ""
+        },
+        {
+          "rating": 5,
+          "title": "Five Stars",
+          "text": "Fast and easy, thanks",
+          "ground_truth": "positive",
+          "prediction": "positive",
+          "llm_emotion": "joy",
+          "nrc_emotion": "none",
+          "nrc_matched_words": "",
+          "nrc_tie": false,
+          "curated_note": ""
+        },
+        {
+          "rating": 5,
+          "title": "Five Stars",
+          "text": "it is really great",
+          "ground_truth": "positive",
+          "prediction": "positive",
+          "llm_emotion": "joy",
+          "nrc_emotion": "none",
+          "nrc_matched_words": "",
+          "nrc_tie": false,
+          "curated_note": ""
+        },
+        {
+          "rating": 5,
+          "title": "Five Stars",
+          "text": "convenience",
+          "ground_truth": "positive",
+          "prediction": "positive",
+          "llm_emotion": "joy",
+          "nrc_emotion": "none",
+          "nrc_matched_words": "",
+          "nrc_tie": false,
+          "curated_note": ""
+        },
+        {
+          "rating": 4,
+          "title": "It reloaded",
+          "text": "It reloaded",
+          "ground_truth": "positive",
+          "prediction": "positive",
+          "llm_emotion": "joy",
+          "nrc_emotion": "none",
+          "nrc_matched_words": "",
+          "nrc_tie": false,
+          "curated_note": ""
+        },
+        {
+          "rating": 5,
+          "title": "Five Stars",
+          "text": "It did",
+          "ground_truth": "positive",
+          "prediction": "positive",
+          "llm_emotion": "joy",
+          "nrc_emotion": "none",
+          "nrc_matched_words": "",
+          "nrc_tie": false,
+          "curated_note": ""
+        },
+        {
+          "rating": 5,
+          "title": "Easy to use",
+          "text": "Very convenient",
+          "ground_truth": "positive",
+          "prediction": "positive",
+          "llm_emotion": "joy",
+          "nrc_emotion": "none",
+          "nrc_matched_words": "",
+          "nrc_tie": false,
+          "curated_note": ""
+        },
+        {
+          "rating": 1,
+          "title": "Didn\u2019t work",
+          "text": "None of the cards worked in the Starbucks ap or at Starbucks stores",
+          "ground_truth": "negative",
+          "prediction": "negative",
+          "llm_emotion": "anger",
+          "nrc_emotion": "none",
+          "nrc_matched_words": "",
+          "nrc_tie": false,
+          "curated_note": ""
+        },
+        {
+          "rating": 5,
+          "title": "great gifts.",
+          "text": "Thank you!",
+          "ground_truth": "positive",
+          "prediction": "positive",
+          "llm_emotion": "joy",
+          "nrc_emotion": "none",
+          "nrc_matched_words": "",
+          "nrc_tie": false,
+          "curated_note": ""
+        },
+        {
+          "rating": 5,
+          "title": "Great.",
+          "text": "I used it today and it is accepted. Great.",
+          "ground_truth": "positive",
+          "prediction": "positive",
+          "llm_emotion": "joy",
+          "nrc_emotion": "none",
+          "nrc_matched_words": "",
+          "nrc_tie": false,
+          "curated_note": ""
+        },
+        {
+          "rating": 5,
+          "title": "No problems!",
+          "text": "Card worked fine!",
+          "ground_truth": "positive",
+          "prediction": "positive",
+          "llm_emotion": "joy",
+          "nrc_emotion": "none",
+          "nrc_matched_words": "",
+          "nrc_tie": false,
+          "curated_note": ""
+        },
+        {
+          "rating": 5,
+          "title": "Nice tin, very appropriate",
+          "text": "I bought these for my nieces, they loved them. Nice design for the tin.",
+          "ground_truth": "positive",
+          "prediction": "positive",
+          "llm_emotion": "joy",
+          "nrc_emotion": "none",
+          "nrc_matched_words": "",
+          "nrc_tie": false,
+          "curated_note": ""
+        },
+        {
+          "rating": 5,
+          "title": "Five Stars",
+          "text": "Nice 20% discount.",
+          "ground_truth": "positive",
+          "prediction": "positive",
+          "llm_emotion": "joy",
+          "nrc_emotion": "none",
+          "nrc_matched_words": "",
+          "nrc_tie": false,
+          "curated_note": ""
+        },
+        {
+          "rating": 5,
+          "title": "Five Stars",
+          "text": "Kids loved",
+          "ground_truth": "positive",
+          "prediction": "positive",
+          "llm_emotion": "joy",
+          "nrc_emotion": "none",
+          "nrc_matched_words": "",
+          "nrc_tie": false,
+          "curated_note": ""
+        },
+        {
+          "rating": 5,
+          "title": "Five Stars",
+          "text": "easy to use",
+          "ground_truth": "positive",
+          "prediction": "positive",
+          "llm_emotion": "joy",
+          "nrc_emotion": "none",
+          "nrc_matched_words": "",
+          "nrc_tie": false,
+          "curated_note": ""
+        },
+        {
+          "rating": 5,
+          "title": "Great",
+          "text": "Pick a game",
+          "ground_truth": "positive",
+          "prediction": "positive",
+          "llm_emotion": "joy",
+          "nrc_emotion": "none",
+          "nrc_matched_words": "",
+          "nrc_tie": false,
+          "curated_note": ""
+        },
+        {
+          "rating": 5,
+          "title": "Nice!",
+          "text": "Gave as gifts and loved the presentation!",
+          "ground_truth": "positive",
+          "prediction": "positive",
+          "llm_emotion": "joy",
+          "nrc_emotion": "none",
+          "nrc_matched_words": "",
+          "nrc_tie": false,
+          "curated_note": ""
+        },
+        {
+          "rating": 5,
+          "title": "Five Stars",
+          "text": "It was easy to do!",
+          "ground_truth": "positive",
+          "prediction": "positive",
+          "llm_emotion": "joy",
+          "nrc_emotion": "none",
+          "nrc_matched_words": "",
+          "nrc_tie": false,
+          "curated_note": ""
+        },
+        {
+          "rating": 5,
+          "title": "Works great",
+          "text": "Card was bent when it came in but it was acceptable. The card worked perfectly and my sister appreciated it.",
+          "ground_truth": "positive",
+          "prediction": "positive",
+          "llm_emotion": "joy",
+          "nrc_emotion": "none",
+          "nrc_matched_words": "",
+          "nrc_tie": false,
+          "curated_note": ""
+        },
+        {
+          "rating": 1,
+          "title": "This card wasn't activated prior to sending it to us.  It won't work",
+          "text": "The card needs to be activated prior to sending it and it wasn't.  We can't redeem the card.",
+          "ground_truth": "negative",
+          "prediction": "negative",
+          "llm_emotion": "anger",
+          "nrc_emotion": "none",
+          "nrc_matched_words": "",
+          "nrc_tie": false,
+          "curated_note": ""
+        }
+      ],
+      "terse": [
+        {
+          "rating": 5,
+          "title": "Good quality!",
+          "text": "Got what I expected.",
+          "ground_truth": "positive",
+          "prediction": "positive",
+          "llm_emotion": "joy",
+          "nrc_emotion": "anticipation",
+          "nrc_matched_words": "anticipation:good,expected; joy:good; surprise:good; trust:good",
+          "nrc_tie": false,
+          "curated_note": ""
+        },
+        {
+          "rating": 5,
+          "title": "Awsome",
+          "text": "Super easy to add to your account!",
+          "ground_truth": "positive",
+          "prediction": "positive",
+          "llm_emotion": "joy",
+          "nrc_emotion": "trust",
+          "nrc_matched_words": "trust:account",
+          "nrc_tie": false,
+          "curated_note": ""
+        },
+        {
+          "rating": 5,
+          "title": "A great gift!",
+          "text": "Arrived on time and was as advertised.",
+          "ground_truth": "positive",
+          "prediction": "positive",
+          "llm_emotion": "joy",
+          "nrc_emotion": "anticipation",
+          "nrc_matched_words": "anticipation:gift,time; joy:gift; surprise:gift",
+          "nrc_tie": false,
+          "curated_note": ""
+        }
+      ],
+      "tie": [
+        {
+          "rating": 5,
+          "title": "Amazon Gift Cards Did All The Work",
+          "text": "No need to guess what anyone wants. Everyone shops at Amazon and you will get it right every time by letting loved ones purchase exactly what they want or need. I was off the shopping hook at the push of a button!",
+          "ground_truth": "positive",
+          "prediction": "positive",
+          "llm_emotion": "joy",
+          "nrc_emotion": "anticipation/surprise",
+          "nrc_matched_words": "anticipation:gift,time,shopping; joy:gift,shopping; surprise:gift,guess,shopping; trust:shopping",
+          "nrc_tie": true,
+          "curated_note": ""
+        },
+        {
+          "rating": 5,
+          "title": "Amazon",
+          "text": "It's a gift card.",
+          "ground_truth": "positive",
+          "prediction": "positive",
+          "llm_emotion": "trust",
+          "nrc_emotion": "anticipation/joy/surprise",
+          "nrc_matched_words": "anticipation:gift; joy:gift; surprise:gift",
+          "nrc_tie": true,
+          "curated_note": ""
+        },
+        {
+          "rating": 1,
+          "title": "Be ware!!",
+          "text": "Don\u2019t buy. They activate the cards and them they desactivate it. $600 to trash.",
+          "ground_truth": "negative",
+          "prediction": "negative",
+          "llm_emotion": "anger",
+          "nrc_emotion": "disgust/fear/sadness/trust",
+          "nrc_matched_words": "disgust:trash; fear:ware; sadness:trash; trust:don",
+          "nrc_tie": true,
+          "curated_note": ""
+        },
+        {
+          "rating": 5,
+          "title": "Sometimes I use this as cache money for the gift purchases",
+          "text": "Sometimes I use this as cache money for the gift purchases. Vert seamless to buy it online.",
+          "ground_truth": "positive",
+          "prediction": "positive",
+          "llm_emotion": "trust",
+          "nrc_emotion": "anticipation/joy/surprise",
+          "nrc_matched_words": "anger:money; anticipation:money,gift; joy:money,gift; surprise:money,gift; trust:money",
+          "nrc_tie": true,
+          "curated_note": ""
+        },
+        {
+          "rating": 1,
+          "title": "I can't figure out how to use it! I ...",
+          "text": "I can't figure out how to use it! I was trying to use it for some Kindle purchases. I hope I can figure it out on my next try.",
+          "ground_truth": "negative",
+          "prediction": "negative",
+          "llm_emotion": "anger",
+          "nrc_emotion": "anticipation/joy/surprise/trust",
+          "nrc_matched_words": "anticipation:hope; joy:hope; surprise:hope; trust:hope",
+          "nrc_tie": true,
+          "curated_note": ""
+        },
+        {
+          "rating": 5,
+          "title": "Gift card",
+          "text": "Gift card",
+          "ground_truth": "positive",
+          "prediction": "positive",
+          "llm_emotion": "trust",
+          "nrc_emotion": "anticipation/joy/surprise",
+          "nrc_matched_words": "anticipation:gift; joy:gift; surprise:gift",
+          "nrc_tie": true,
+          "curated_note": ""
+        },
+        {
+          "rating": 5,
+          "title": "Great foe mailing",
+          "text": "Nice n compact",
+          "ground_truth": "positive",
+          "prediction": "positive",
+          "llm_emotion": "joy",
+          "nrc_emotion": "anger/fear/trust",
+          "nrc_matched_words": "anger:foe; fear:foe; trust:compact",
+          "nrc_tie": true,
+          "curated_note": ""
+        }
+      ]
+    }
+  }
+}

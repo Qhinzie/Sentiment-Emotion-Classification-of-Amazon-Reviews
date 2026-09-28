@@ -1,0 +1,3 @@
+rating,title,text,ground_truth,prediction
+4.0,"Great idea, nice design.","Well, I ordered this card specifically for how the box looked.  It was secured in a plastic bag....and whoever packaged it just shoved it in, and the bow was messed up.  I had to get my curling iron and fix it.  Frankly, that is ridiculous.  Fixable...but come on.  How hard is this for $100?!?  The idea and the design, great.  Very nice.  Execution, less so.",positive,negative
+4.0,Watch what you are buying,Product was not what I expected. I wanted to get Ebay cards and not visa debit cards. Lesson learned.,positive,negative

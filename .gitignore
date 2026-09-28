@@ -1,0 +1,21 @@
+# ---- secrets ----
+.env
+*.env
+.env.*
+!.env.example
+
+# ---- local runtime state ----
+.venv/
+__pycache__/
+*.pyc
+.llm_classifier_cache.json
+.DS_Store
+
+# ---- large downloaded data + lexicon (download via ./setup.sh) ----
+data/
+predictions.csv
+
+# ---- editor/OS noise ----
+.idea/
+.vscode/
+*~

@@ -1,0 +1,11 @@
+Classify the sentiment of this Amazon product review as "positive", "neutral" or "negative", and its primary emotion. The emotion MUST be exactly one of: anger, anticipation, disgust, fear, joy, sadness, surprise, trust.
+
+How to decide:
+- "positive": clearly favorable, enthusiastic, or satisfied. Mostly praise with a minor gripe is still positive.
+- "negative": clearly unfavorable, disappointed, or angry. Mostly complaint with a small positive is still negative.
+- "neutral": genuinely mixed (real pros and cons with neither dominating), lukewarm or indifferent ("it's okay", "does the job"), or purely factual with no opinion.
+
+Title: {title}
+Text: {text}
+
+Return ONLY a JSON object like {"sentiment": "positive", "emotion": "joy"} (or "neutral", or "negative", each with one of the 8 emotions listed above).
